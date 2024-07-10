@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starstreaming Signin</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    
+</head>
+{% load static %}
+<link rel="stylesheet"  type="text/css" href="{% static 'style.css' %}">
+<body>
+    <h1 style="color: rgb(229, 9, 20); font-family:fantasy">StarStreaming</h1>
+    <center>
+    <h1 style="color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" >Unlimited Movies and Tv shows and more</h1>
+    <h3 style="color: white;" >Watch anytime,&nbsp;Anywhare</h3>
+    </center>
+    <center>
+    <div class="rgbox">
+        <h2 style="color: black">Sign In and Enjoy !</h2>
+       
+        <form  method="POST">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td style="color:white;">Username:</td><td><input type="text" name="Username" placeholder="Enter your username"></td>
+                </tr>
+                <tr>
+                    <td style="color: white;">Email:</td><td><input type="email" name="email" placeholder="Enter Your Email"></td>
+                </tr>
+                <tr>
+                    <td style="color: white;">Password:</td><td><input id="myInput" name="password" type="password" placeholder="Enter Your Password"></td>
+                </tr>
+                
+            </table>
+            <input type="checkbox" onclick="myFunction()">Show Password<br><br>
+            <br>
+            <button>Sign In</button>
+        </form>
+    </div>
+    </center>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+              x.type = "text";
+            } else {
+              x.type = "password";
+            }
+          }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(8, 20, 41)
+}
+.topnav {
+    box-shadow: 2px 2px 15px 15px black;
+    background-color: #000000;
+    overflow: hidden; 
+    border-radius: 8px;
+    position: sticky;
+  }
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #bb1b1b;
+    color: black;
+    border-radius: 8px;
+  }
+  .topnav a.active {
+    background-color: #000000;
+    color: white;
+    font-size: larger;
+    
+  }
+  #pad{
+    padding-left: 70%;
+  }
+
+  
+  #box{
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px; 
+    width: 300px;
+    height: auto;
+    
+
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.slideshow-container img {
+  width: 1200px;
+  height: 550px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 15px 15px black;
+}
+
+.moobox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1300px;
+  justify-content: center;
+  margin: auto;
+}
+.moo{
+  flex: 1 0 300px;
+  border: 3px solid rgb(0, 0, 0);
+  margin: 5px;
+  min-height: 50px;
+  border-radius: 8px;
+  background-color: #575252;
+}
+.moo:hover{
+  box-shadow: 2px 2px 15px 15px black;
+}
+
+
+.CLC {
+  color: white;
+}
+.CLC b{
+  color: #000000;
+}
+
+.wbut a{
+  padding: 10px;
+  text-decoration: none;
+  font-size: larger;
+  text-align: center;
+  
+}
+

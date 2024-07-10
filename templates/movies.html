@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StarStreaming movies list</title>
+    
+
+
+
+
+</head>
+{% load static %}
+<link rel="stylesheet"  type="text/css" href="{% static 'movies.css' %}">
+<body>
+  <div class="topnav">
+    <a class="active">StarStreaming</a>
+    {% if request.session.user_id %}
+    <a id="pad" style="pointer-events: none; color:rgb(255, 255, 255);font-weight:bold">Welcome ! 👨🏻‍💼 {{ request.session.user_Username }}</a>
+    <a style="float: right;"   href="{% url 'logout' %}">Logout</a>
+    {%endif%}
+  </div>
+   
+
+
+
+<center>
+    <h3 style="color: white;">NEW RELEASES</h3>
+    <div class="slideshow-container">
+  
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="{% static 'img/boys.jpg'%}">
+        <div class="text" style="color: white;">THE BOYS</div>
+      </div> 
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="{% static 'img/moneyhiest.jpg'%}">
+        <div class="text" style="color: white;">MONEY HIEST</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="{% static 'img/got.jpg'%}">
+        <div class="text" style="color: white;">GAME OF THRONES</div>
+      </div>
+  
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="{% static 'img/sg.jpg'%}">
+        <div class="text" style="color: white;">SQUID GAME</div>
+      </div>
+      
+      </div>
+      <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+  </div>
+</center>
+<hr>
+<center>
+<h2 style="color: white;">Recently added movies</h2>
+</center>
+
+<div class="moobox">
+  {% for i in movies %}
+    <div class="moo">
+            <figure><img src="{{i.image.url}}"  width="200px" height="180px"></figure>
+            <div class="CLC">
+            <p><b>Name :</b> &nbsp;{{i.Name}}</p>
+            <p><b>Year :</b>&nbsp;{{i.Year}}</p>
+            <p><b>categories :</b>&nbsp;{{i.categories}}</p>
+            <p><b>Durection :</b>&nbsp; {{i.Durection}}</p>
+            <p><b>Descriptions :</b> &nbsp;{{i.descriptions}}</p>
+            </div>
+          
+            
+    </div> 
+  {% endfor %}
+  
+</div>  
+<div class="wbut">
+<center>
+    <button><a href="{% url 'video_list' %}"><b>Watch Movies</b></a></button>
+</center> 
+</div>
+
+
+
+
+
+
+
+
+  <script>
+    let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); 
+  }
+  
+ 
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body{
+    background-image: url(img/bgfd.jpg);
+}
+.topnav {
+  background-color: #9791916b;
+  overflow: hidden;
+  box-shadow: 2px 2px 15px 15px black;
+  border-radius: 8px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #bb1b1b;
+  color: black;
+  border-radius: 8px;
+}
+.topnav a.active {
+  background-color: #aa1111;
+  color: white;
+}
+
+.tv{ 
+  background: linear-gradient( to right, black 40%,rgba(255, 255, 0, 0));
+  height: 600px;
+  width: 100%;
+  margin: 0;
+  box-shadow: 2px 2px 15px 30px black;
+  
+}
+.tv h1{
+  color: white;
+  padding-top: 200px;
+  padding-left: 150px; 
+} 
+.tv h3{
+  color: white;
+  padding-left: 120px; 
+} 
+.wtc{ 
+  background: linear-gradient( to left, black 40%,rgba(255, 255, 0, 0));
+  height: 600px;
+  width: 100%;
+  margin: 0;
+  box-shadow: 2px 2px 15px 30px black;
+  
+}
+.wtc h1{
+  color: white;
+  padding-left: 65%;
+  padding-top: 200px;
+  
+} 
+.wtc h3{
+  color: white;
+  padding-left: 62%;
+}
+.hide {
+  display: none;
+}
+.myDIV{
+  background-color: rgb(70, 64, 64);
+  text-align: center;
+  border-radius: 8px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.myDIV:hover + .hide {
+  background-color: rgb(70, 64, 64);
+  display: block;
+  color: white;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+  
+}
+.hov{ 
+  background-color: black;
+  height: 600px;
+  width: 100%;
+  margin: 0;
+  box-shadow: 2px 2px 15px 30px black;
+  
+}
+.abo{
+  color: white;
+}

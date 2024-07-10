@@ -1,0 +1,22 @@
+<!-- templates/video_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video List</title>
+</head>
+{% load static %}
+<link rel="stylesheet"  type="text/css" href="{% static 'videolist.css' %}">
+<body>
+    <h1>Movies</h1>
+    <div class="watboox">
+        {% for video in videos %}
+              <div class="wat">
+                <h1>{{video.Name}}</h1>
+                <figure><img src="{{video.image.url}}"  width="200px" height="180px"></figure>
+            
+                <center><button><a href="{% url 'play_video' video.id %}">Watch Now</a></button></center>
+              </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

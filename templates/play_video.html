@@ -1,0 +1,19 @@
+<!-- templates/play_video.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Play Video</title>
+</head>
+{% load static %}
+<link rel="stylesheet"  type="text/css" href="{% static 'playvideo.css' %}">
+<body>
+    <center>
+    <h1>{{ video.Name }}</h1>
+    <video width="700" height="400" controls>
+        <source src="{{ video.video.url }}" type="video/mp4">
+    </video>
+    <p>{{ video.descriptions }}</p>
+    <a href="{% url 'video_list' %}">Back to Video List</a>
+    </center>
+</body>
+</html>
